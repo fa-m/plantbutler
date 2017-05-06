@@ -1,0 +1,29 @@
+{
+  "name": "tentacle",
+  "plural": "tentacles",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "location": {
+      "type": "geopoint"
+    },
+    "name": {
+      "type": "string"
+    },
+    "currentSoilState": {
+      "type": [
+        "string"
+      ]
+    },
+    "soc": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,27 @@
+{
+  "name": "hive",
+  "plural": "hives",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "sow": {
+      "type": "number"
+    },
+    "sowR": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tentacles": {
+      "type": "hasMany",
+      "model": "tentacle",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

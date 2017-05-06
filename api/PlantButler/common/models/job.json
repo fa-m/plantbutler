@@ -1,0 +1,30 @@
+{
+  "name": "job",
+  "plural": "jobs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "waterUsed": {
+      "type": "number"
+    },
+    "timestmp": {
+      "type": "date"
+    },
+    "currentUsage": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tentacle": {
+      "type": "hasOne",
+      "model": "tentacle",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
