@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Posts",
-		"_postman_id": "f5bceaf6-1e3a-993a-7239-127a57ae89c9",
+		"_postman_id": "8ab629aa-f9b0-1d7c-7690-c53a4d505e0c",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -81,7 +81,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"sow\": 0.87,\n  \"sowR\": 0.34\n, \"sod\": 0.97,\n}"
+					"raw": "{\n  \"sow\": 0.87,\n  \"sowR\": 0.34\n, \"sod\": 0.97\n}"
 				},
 				"description": ""
 			},
@@ -101,7 +101,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"waterUsed\": 0.0,\n  \"timestmp\": \"2017-05-07T19:53:36.763Z\",\n  \"currentUsage\": 0\n}"
+					"raw": "{\n    \"waterUsed\": 0,\n    \"timestmp\": \"2017-05-07T19:35:53.371Z\",\n    \"jobState\": 0,\n    \"currentUsage\": 0\n}"
 				},
 				"description": ""
 			},
@@ -121,9 +121,49 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"waterUsed\": 0.0,\n  \"timestmp\": \"2017-05-08T07:53:36.763Z\",\n  \"currentUsage\": 0\n}"
+					"raw": "{\n  \"waterUsed\": 0.0,\n  \"timestmp\": \"2017-05-07T15:00:36.763Z\",\n  \"jobState\": 1,\n  \"currentUsage\": 0\n}"
 				},
 				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Job3",
+			"request": {
+				"url": "http://0.0.0.0:3000/api/jobs",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"waterUsed\": 0.0,\n  \"timestmp\": \"2017-05-08T10:00:36.763Z\",\n  \"jobState\": 2,\n  \"currentUsage\": 0\n}"
+				},
+				"description": "abort_rain"
+			},
+			"response": []
+		},
+		{
+			"name": "Job4",
+			"request": {
+				"url": "http://0.0.0.0:3000/api/jobs",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"waterUsed\": 0.0,\n  \"timestmp\": \"2017-05-08T20:00:36.763Z\",\n  \"jobState\": 3,\n  \"currentUsage\": 0\n}"
+				},
+				"description": "abort_user"
 			},
 			"response": []
 		}
