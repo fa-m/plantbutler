@@ -13,6 +13,9 @@
     "timestmp": {
       "type": "date"
     },
+      "jobState": {
+      "type": "number"
+    },
     "currentUsage": {
       "type": "number"
     }
