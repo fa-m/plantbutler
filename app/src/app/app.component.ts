@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Configuration } from '../pages/configuration/configuration';
-import {HttpTest} from "../pages/http-test/http-test";
+import { TentacleSingle } from '../pages/tentacle-single/tentacle-single';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +26,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'Configuration', component: Configuration },
-      { title: 'HttpTest', component: HttpTest }
+      { title: 'Tentacile Single', component: TentacleSingle }
     ];
 
   }

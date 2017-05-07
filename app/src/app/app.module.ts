@@ -6,7 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Configuration } from '../pages/configuration/configuration';
-import { HttpTest } from '../pages/http-test/http-test';
+import { TentacleSingle } from '../pages/tentacle-single/tentacle-single';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +21,7 @@ import {HttpModule} from "@angular/http";
     HomePage,
     ListPage,
     Configuration,
-    HttpTest
+    TentacleSingle
   ],
   imports: [
     BrowserModule,
@@ -34,7 +34,7 @@ import {HttpModule} from "@angular/http";
     HomePage,
     ListPage,
     Configuration,
-    HttpTest
+    TentacleSingle
   ],
   providers: [
     StatusBar,
