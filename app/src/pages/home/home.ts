@@ -5,6 +5,8 @@ import 'rxjs/add/operator/map';
 import { TentacleService } from '../../providers/tentacle-service';
 import {HivesService} from "../../providers/hive-service";
 
+import {TentacleSingle} from "../tentacle-single/tentacle-single";
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -14,6 +16,8 @@ export class HomePage {
 
   public foundTentacles;
   public foundHives;
+
+  tentacleSingle = TentacleSingle;
 
   constructor(public navCtrl: NavController, private tentacles: TentacleService, private hives: HivesService) {
 

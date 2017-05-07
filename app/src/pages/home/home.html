@@ -28,7 +28,7 @@
 
   <h3>Tentacles</h3>
 
-  <ion-card *ngFor="let tentacle of foundTentacles">
+  <ion-card *ngFor="let tentacle of foundTentacles" [navPush]="tentacleSingle">
 
     <img src="assets/img/{{tentacle.type}}-item.jpg"/>
 
@@ -42,13 +42,13 @@
       <ion-list>
         <ion-item-sliding>
           <ion-item>
-            <h2>Next Job: 8 p.m.</h2>
+            <h2><small>Next Job: 8 p.m.</small></h2>
           </ion-item>
 
           <ion-item-options side="right">
-            <button ion-button color="primary">
+            <button ion-button color="danger" icon-left>
               <ion-icon name="close"></ion-icon>
-              Cancel
+              <small>Cancel</small>
             </button>
           </ion-item-options>
         </ion-item-sliding>
@@ -56,7 +56,7 @@
       <ion-list>
         <ion-item-sliding>
           <ion-item>
-            <h2>Following Job: tomorrow, 8 p.m. canceled - Rain 97%</h2>
+            <small>Following Job: canceled - Rain 97%</small>
           </ion-item>
         </ion-item-sliding>
       </ion-list>
