@@ -12,6 +12,9 @@
     },
     "sowR": {
       "type": "number"
+    },
+    "sod": {
+      "type": "number"
     }
   },
   "validations": [],
