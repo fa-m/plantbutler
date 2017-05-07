@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TentacleService } from '../providers/tentacle-service';
+import { HivesService } from '../providers/hive-service';
 import {HttpModule} from "@angular/http";
 
 @NgModule({
@@ -39,6 +40,7 @@ import {HttpModule} from "@angular/http";
     StatusBar,
     SplashScreen,
     TentacleService,
+    HivesService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

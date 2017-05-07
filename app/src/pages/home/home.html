@@ -11,39 +11,27 @@
   <h3>PlantButler</h3>
 
   <ion-card>
+    <ion-card-content *ngFor="let hive of foundHives">
+      <ion-card-title>Hive</ion-card-title>
+      <p>
+      {{hive.sow}} &middot; {{hive.sowR}}
+      </p>
+    </ion-card-content>
+  </ion-card>
 
-    <img src="assets/img/rose-item.jpg"/>
+  <ion-card *ngFor="let tentacle of foundTentacles">
+
+    <img src="assets/img/{{tentacle.type}}-item.jpg"/>
 
     <ion-card-content>
       <ion-card-title>
-        Roses
+        {{ tentacle.name }}
       </ion-card-title>
       <p>
-        Status:
-        <button (click)="getTentacles()"></button>
+        <ion-icon name='battery-full'></ion-icon> {{ tentacle.soc*100 | number }}% &middot; Soil State: <ion-icon name="{{ showSoilState(tentacle.currentSoilState) }}"></ion-icon>
       </p>
     </ion-card-content>
 
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='star'></ion-icon>
-          Favorite
-        </button>
-      </ion-col>
-      <ion-col text-center>
-        <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='musical-notes'></ion-icon>
-          Listen
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="danger" icon-left>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-      </ion-col>
-    </ion-row>
 
   </ion-card>
 

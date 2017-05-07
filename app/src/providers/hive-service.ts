@@ -9,18 +9,18 @@ import 'rxjs/add/operator/map';
   for more info on providers and Angular 2 DI.
 */
 @Injectable()
-export class TentacleService {
+export class HivesService {
 
   api:string = 'http://0.0.0.0:3000/api';
 
   constructor(public http: Http) {
-    console.log('Hello TentacleService Provider');
+    console.log('Hello HivesService Provider');
   }
 
-  getTentacles() {
-    let tentacles = this.http.get(this.api + '/tentacles');
+  getHives() {
+    let hives = this.http.get(this.api + '/hives');
 
-    return tentacles;
+    return hives;
   }
 
 

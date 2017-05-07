@@ -26,14 +26,6 @@ export class HttpTest {
     console.log('ionViewDidLoad HttpTest');
   }
 
-  getRepos() {
-    this.tentacles.getRepos('fa-m').subscribe(
-        data => {
-          this.foundRepos = data.json();
-        },
-        err => console.error(err),
-        () => console.log('getRepos completed')
-    );
-  }
+
 
 }
