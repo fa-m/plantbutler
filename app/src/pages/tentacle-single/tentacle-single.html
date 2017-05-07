@@ -7,12 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>tentacleSingle</ion-title>
+    <ion-title>tentacle detail</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+<ion-item><h1>{{currentTentacle && currentTentacle.name}}</h1></ion-item>
+<ion-item>Location: 
+<ion-item>Longitude: {{ currentTentacle && currentTentacle.location.lat }} </ion-item> 
+<ion-item>Latitude: {{ currentTentacle && currentTentacle.location.long}}(long)</ion-item>
+</ion-item>
+<ion-item>Soil State: {{ currentTentacle && currentTentacle.currentSoilState*100 | number }}% <ion-icon name="{{ currentTentacle && showSoilState(currentTentacle.currentSoilState) }}"></ion-icon>
+</ion-item>
+<ion-item>Battery status: {{ currentTentacle && currentTentacle.soc*100 | number }}% &middot; <ion-icon name='battery-full'></ion-icon></ion-item>
+<div></div>
 
 </ion-content>
