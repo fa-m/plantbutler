@@ -7,17 +7,25 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>PlantButler</h3>
 
-  <ion-card>
-    <ion-card-content *ngFor="let hive of foundHives">
-      <ion-card-title>Hive</ion-card-title>
-      <p>
-      {{hive.sow}} &middot; {{hive.sowR}}
-      </p>
-    </ion-card-content>
+
+<ion-content class="card-background-page" padding>
+
+  <h3>PlantButler - Hive</h3>
+
+  <ion-card *ngFor="let hive of foundHives">
+
+    <img src="assets/img/hive.jpg"/>
+    <div class="card-title">Hive</div>
+    <div class="card-subtitle">
+      Drone <ion-icon name='battery-full'></ion-icon> {{hive.sod*100}}% <br />
+      Water <ion-icon name='color-fill'></ion-icon> {{hive.sow*100}}% &middot;
+      Rainwater <ion-icon name='color-fill'></ion-icon> {{hive.sowR*100}}% <br />
+    </div>
+
   </ion-card>
+
+  <h3>Tentacles</h3>
 
   <ion-card *ngFor="let tentacle of foundTentacles">
 
@@ -30,6 +38,27 @@
       <p>
         <ion-icon name='battery-full'></ion-icon> {{ tentacle.soc*100 | number }}% &middot; Soil State: <ion-icon name="{{ showSoilState(tentacle.currentSoilState) }}"></ion-icon>
       </p>
+      <ion-list>
+        <ion-item-sliding>
+          <ion-item>
+            <h2>Next Job: 8 p.m.</h2>
+          </ion-item>
+
+          <ion-item-options side="right">
+            <button ion-button color="primary">
+              <ion-icon name="close"></ion-icon>
+              Cancel
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+      <ion-list>
+        <ion-item-sliding>
+          <ion-item>
+            <h2>Following Job: tomorrow, 8 p.m. canceled - Rain 97%</h2>
+          </ion-item>
+        </ion-item-sliding>
+      </ion-list>
     </ion-card-content>
 
 

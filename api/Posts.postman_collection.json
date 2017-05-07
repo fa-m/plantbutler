@@ -41,7 +41,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"location\": {\n    \"lat\": 0,\n    \"lng\": 0\n  },\n  \"name\": \"Tulps\",\n  \"currentSoilState\": [\n    0.50\n  ],\n  \"soc\": 0.90,\n  \"type\": \"tulps\",\n  \"hiveId\": 0,\n  \"jobId\": 0\n}"
+					"raw": "{\n  \"location\": {\n    \"lat\": 0,\n    \"lng\": 0\n  },\n  \"name\": \"Tulips\",\n  \"currentSoilState\": [\n    0.50\n  ],\n  \"soc\": 0.90,\n  \"type\": \"tulips\",\n  \"hiveId\": 0,\n  \"jobId\": 0\n}"
 				},
 				"description": ""
 			},
@@ -81,7 +81,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"sow\": 0.100,\n  \"sowR\": 0.00\n}"
+					"raw": "{\n  \"sow\": 0.87,\n  \"sowR\": 0.34\n, \"sod\": 0.97,\n}"
 				},
 				"description": ""
 			},

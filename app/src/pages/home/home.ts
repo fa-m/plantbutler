@@ -22,6 +22,9 @@ export class HomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HttpTest');
     this.getTentacles();
+    this.getHives();
+
+    console.log(this.foundHives);
   }
 
 
