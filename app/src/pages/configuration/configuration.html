@@ -6,66 +6,137 @@
 -->
 
 
-
 <ion-content padding>
 
-  <ion-slides pager>
+    <ion-slides pager>
 
-    <ion-slide class="slide">
-      <IMG SRC="assets/img/welcome_watering_can_icon.png" ALT="some text" class='myimage'>
-      <h1>Welcome!</h1>
-      <p>This is Bernard, your smart friend helping you, to keep your plants alive and save water and money :)</p>
-      <p>The PlantButler team says thank you for your trust by buying our product</p>
-      <p>Within the next 10 Steps we will guide you through the initial setup process</p>
-      <p class="Tutorial_Navigation"><em>Swipe right to start</em></p>
-    </ion-slide>
+        <ion-slide class="slide">
+            <IMG SRC="assets/img/welcome_watering_can_icon.png" class='myimage'/>
+            <h1>Welcome!</h1>
+            <p>This is Bernard, your smart friend helping you, to keep your plants alive and save water and money :)</p>
+            <p>The PlantButler team says thank you for your trust by buying our product</p>
+            <p>Within the next 10 Steps we will guide you through the initial setup process</p>
+            <p class="Tutorial_Navigation"><em>Swipe right to start</em></p>
+        </ion-slide>
 
-    <ion-slide class="slide">
-    <IMG SRC="assets/img/2nd_screen_station_hive.png" ALT="some text" class='hive_intro_icon'>
-      <h1>Setting up the hive</h1>
-      <p>- Place the hive at a convenient place</p>
-      <p>- Plugin the power cable</p>
-      <p>- Fill the water tank with water</p>
-      
-      <p class="Tutorial_Navigation"><em>Swipe right to continue</em></p>
-    </ion-slide>
+        <ion-slide class="slide">
+            <IMG SRC="assets/img/2nd_screen_station_hive.png"/>
+            <h1>Setting up the hive</h1>
+            <p>- Place the hive at a convenient place</p>
+            <p>- Plugin the power cable</p>
+            <p>- Fill the water tank with water</p>
 
-    <ion-slide class="slide">
-      <h2>Slide 3</h2>
-    </ion-slide>
+            <p class="Tutorial_Navigation"><em>Swipe right to continue</em></p>
+        </ion-slide>
 
-    <ion-slide class="slide">
-      <h2>Slide 3</h2>
-    </ion-slide>
+        <ion-slide class="slide">
+            <IMG SRC="assets/img/wifi_icon.png"/>
+            <h1>Connect your phone to hives</h1>
+            <ion-item>
+                <ion-label>Select Hive</ion-label>
+                <ion-select [(ngModel)]="hive" multiple="true">
+                    <ion-option>Hello I'm your hive!</ion-option>
+                    <ion-option>GetOffMyLawn</ion-option>
+                    <ion-option>Mom Use This One!</ion-option>
+                    <ion-option>Pretty Fly For A Wi-Fi</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Select Network</ion-label>
+                <ion-select [(ngModel)]="wifis" multiple="true">
+                    <ion-option>Hello I'm your hive!</ion-option>
+                    <ion-option>GetOffMyLawn</ion-option>
+                    <ion-option>Mom Use This One!</ion-option>
+                    <ion-option>Pretty Fly For A Wi-Fi</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label fixed>Password:</ion-label>
+                <ion-input type="password" value=""></ion-input>
+            </ion-item>
+            <button ion-button outline class="mbutton" (click)="nextSlide()">connect</button>
+        </ion-slide>
 
-    <ion-slide class="slide">
-      <h2>Slide 3</h2>
-    </ion-slide>
+        <ion-slide class="slide">
+            <IMG SRC="assets/img/drone.png"/>
+            <h1>Place Bernard on hive</h1>
+            <p>you may need to charge the drone first.</p>
+            <p>This may take a while.</p>
+            <p>Charging complete! &#10003;</p>
+            <p class="Tutorial_Navigation"><em>Swipe right to continue</em></p>
+        </ion-slide>
 
-    <ion-slide class="slide">
-      <h2>Slide 3</h2>
-    </ion-slide>
+        <ion-slide class="slide">
+            <IMG SRC="assets/img/beacon.png"/>
+            <h1>Place tentacles near your plants</h1>
+            <p>Place one beacon for each species.</p>
+            <p>Push them about two centimetres into the ground.</p>
+            <button ion-button outline class="mbutton">Confirm tentacle</button>
+            <button ion-button outline class="mbutton">Add another tentacle</button>
+            <p class="Tutorial_Navigation"><em>Swipe right to continue</em></p>
+        </ion-slide>
 
-    <ion-slide class="slide">
-      <h2>Slide 3</h2>
-    </ion-slide>
+        <ion-slide class="slide">
+            <IMG SRC="assets/img/beacon.png"/>
+            <h1>TODO: LOADING Page</h1>
 
-    <ion-slide class="slide">
-      <h2>Slide 3</h2>
-    </ion-slide>
+        </ion-slide>
 
-    <ion-slide class="slide">
-      <h2>Slide 3</h2>
-    </ion-slide>
-
-    <ion-slide class="slide">
-      <h2>Slide 3</h2>
-    </ion-slide>
-
-    <ion-slide class="slide">
-      <h2>Slide 3</h2>
-    </ion-slide>
-
-  </ion-slides>
+    </ion-slides>
 
 </ion-content>
+
+
+
+<!--
+
+constructor(public loadingCtrl: LoadingController) {
+
+}
+
+presentLoadingDefault() {
+  let loading = this.loadingCtrl.create({
+    content: 'Please wait...'
+  });
+
+  loading.present();
+
+  setTimeout(() => {
+    loading.dismiss();
+  }, 5000);
+}
+
+presentLoadingCustom() {
+  let loading = this.loadingCtrl.create({
+    spinner: 'hide',
+    content: `
+      <div class="custom-spinner-container">
+        <div class="custom-spinner-box"></div>
+      </div>`,
+    duration: 5000
+  });
+
+  loading.onDidDismiss(() => {
+    console.log('Dismissed loading');
+  });
+
+  loading.present();
+}
+
+presentLoadingText() {
+  let loading = this.loadingCtrl.create({
+    spinner: 'hide',
+    content: 'Loading Please Wait...'
+  });
+
+  loading.present();
+
+  setTimeout(() => {
+    this.nav.push(Page2);
+  }, 1000);
+
+  setTimeout(() => {
+    loading.dismiss();
+  }, 5000);
+}
+-->

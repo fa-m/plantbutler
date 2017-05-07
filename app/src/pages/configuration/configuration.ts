@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
 
 /**
  * Generated class for the Configuration page.
@@ -13,12 +13,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'configuration.html',
 })
 export class Configuration {
+  @ViewChild(Slides) slides: Slides;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Configuration');
+  }
+  
+  nextSlide() {
+    this.slides.slideNext();
   }
 
 }
