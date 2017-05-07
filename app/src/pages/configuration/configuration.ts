@@ -15,6 +15,12 @@ import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
 export class Configuration {
   @ViewChild(Slides) slides: Slides;
 
+  numberOfBeacons: number = 0;
+
+  incrementNumberOfBeacons() {
+  this.numberOfBeacons++;
+  }
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
