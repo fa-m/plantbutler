@@ -1,5 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
+import { PredictGarden } from '../predict-garden/predict-garden';
 
 /**
  * Generated class for the Configuration page.
@@ -14,6 +15,8 @@ import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
 })
 export class Configuration {
   @ViewChild(Slides) slides: Slides;
+
+  predictGarden = PredictGarden;
 
   numberOfBeacons: number = 0;
 
@@ -31,5 +34,6 @@ export class Configuration {
   nextSlide() {
     this.slides.slideNext();
   }
+
 
 }

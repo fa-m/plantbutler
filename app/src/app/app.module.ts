@@ -7,13 +7,15 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Configuration } from '../pages/configuration/configuration';
 import { TentacleSingle } from '../pages/tentacle-single/tentacle-single';
+import { PredictGarden } from '../pages/predict-garden/predict-garden';
+import {HttpModule} from "@angular/http";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TentacleService } from '../providers/tentacle-service';
 import { HivesService } from '../providers/hive-service';
-import {HttpModule} from "@angular/http";
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {HttpModule} from "@angular/http";
     HomePage,
     ListPage,
     Configuration,
-    TentacleSingle
+    TentacleSingle,
+    PredictGarden
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import {HttpModule} from "@angular/http";
     HomePage,
     ListPage,
     Configuration,
-    TentacleSingle
+    TentacleSingle,
+    PredictGarden
   ],
   providers: [
     StatusBar,

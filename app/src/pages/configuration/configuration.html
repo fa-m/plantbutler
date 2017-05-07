@@ -73,14 +73,15 @@
             <p>Place one beacon for each species.</p>
             <p>Push them about two centimetres into the ground.</p>
             <h3>Placed: {{numberOfBeacons}}</h3>
-            <button ion-button outline class="mbutton" (click)="incrementNumberOfBeacons()">Confirm</button>
+            <button ion-button outline class="mbutton" (click)="openModal()">Confirm</button>
             <p class="Tutorial_Navigation"><em (click)="nextSlide()">Finished!</em></p>
         </ion-slide>
 
         <ion-slide class="slide">
-            <IMG SRC="assets/img/dron-animated.gif"/>
+            <img src="assets/img/dron-animated.gif"/>
             <h1>Give me a sec!</h1>
             <p>I'll just have a look at your garden</p>
+            <p><button ion-button outline class="mbutton" [navPush]="predictGarden">OK :)</button></p>
         </ion-slide>
 
     </ion-slides>
